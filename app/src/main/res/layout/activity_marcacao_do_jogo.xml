@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MarcacaoDoJogo">
+
+    <TextView
+        android:id="@+id/cronometro"
+        android:layout_width="186dp"
+        android:layout_height="45dp"
+        android:text="Cronometro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/time1"
+        android:layout_width="161dp"
+        android:layout_height="33dp"
+        android:text="time1"
+        app:layout_constraintEnd_toEndOf="@+id/cronometro"
+        app:layout_constraintStart_toStartOf="@+id/cronometro"
+        app:layout_constraintTop_toBottomOf="@+id/cronometro" />
+
+    <TextView
+        android:id="@+id/time2"
+        android:layout_width="161dp"
+        android:layout_height="33dp"
+        android:text="time2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432" />
+
+    <TextView
+        android:id="@+id/qtsDeGols1"
+        android:layout_width="105dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="Qts de gols"
+        app:layout_constraintEnd_toStartOf="@+id/addGols1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time1" />
+
+    <TextView
+        android:id="@+id/faltasTime1"
+        android:layout_width="105dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="40dp"
+        android:text="Faltas"
+        app:layout_constraintEnd_toStartOf="@+id/addFaltas1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qtsDeGols1" />
+
+    <TextView
+        android:id="@+id/cartaoVermelho1"
+        android:layout_width="105dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:text="cartaoVermelho"
+        app:layout_constraintEnd_toStartOf="@+id/addCartaoVermelho1"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cartaoAmarelo1" />
+
+    <TextView
+        android:id="@+id/cartaoAmarelo1"
+        android:layout_width="105dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="28dp"
+        android:text="cartaoAmarelo"
+        app:layout_constraintEnd_toStartOf="@+id/addcartaoAmarelo1"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/faltasTime1" />
+
+    <EditText
+        android:id="@+id/numeroDeGols1"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="9dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="#9C27B0"
+        android:textColorHighlight="#FFEB3B"
+        android:textColorLink="#9C27B0"
+        app:layout_constraintBottom_toTopOf="@+id/qtsFaltas1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toEndOf="@+id/addGols1"
+        app:layout_constraintTop_toBottomOf="@+id/time1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/qtsCartaoAmarelo1"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/qtsCartaoVermelho1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/addcartaoAmarelo1" />
+
+    <EditText
+        android:id="@+id/qtsCartaoVermelho1"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/time2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/addCartaoVermelho1" />
+
+    <EditText
+        android:id="@+id/qtsFaltas1"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/qtsCartaoAmarelo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/addFaltas1" />
+
+    <TextView
+        android:id="@+id/qtsDeGols2"
+        android:layout_width="105dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="12dp"
+        android:text="Qts de gols"
+        app:layout_constraintBottom_toTopOf="@+id/faltasTime2"
+        app:layout_constraintEnd_toStartOf="@+id/time2"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time2"
+        app:layout_constraintVertical_bias="0.631" />
+
+    <Button
+        android:id="@+id/addCartaoAmarelo2"
+        android:layout_width="61dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="16dp"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/addCartaoVermelho2"
+        app:layout_constraintEnd_toEndOf="@+id/addCartaoVermelho2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/addCartaoVermelho2" />
+
+    <EditText
+        android:id="@+id/qtsCartaoVermelho"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/addCartaoVermelho2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toEndOf="@+id/addCartaoVermelho2"
+        app:layout_constraintTop_toBottomOf="@+id/qtsCartaoVermelho2" />
+
+    <Button
+        android:id="@+id/addFaltas2"
+        android:layout_width="61dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="8dp"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/addCartaoAmarelo2"
+        app:layout_constraintEnd_toEndOf="@+id/addCartaoAmarelo2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/addCartaoAmarelo2" />
+
+    <Button
+        android:id="@+id/addCartaoVermelho2"
+        android:layout_width="61dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="144dp"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinalizarPartida"
+        app:layout_constraintEnd_toEndOf="@+id/btnFinalizarPartida"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="@+id/btnFinalizarPartida" />
+
+    <TextView
+        android:id="@+id/cartaoAmarelo2"
+        android:layout_width="105dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="CartaoAmarelo"
+        app:layout_constraintBottom_toTopOf="@+id/cartaoVermelho2"
+        app:layout_constraintEnd_toEndOf="@+id/faltasTime2"
+        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/qtsCartaoVermelho2"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toEndOf="@+id/addCartaoAmarelo2"
+        app:layout_constraintTop_toBottomOf="@+id/qtsFaltas2" />
+
+    <EditText
+        android:id="@+id/qtsFaltas2"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toEndOf="@+id/addFaltas2"
+        app:layout_constraintTop_toBottomOf="@+id/numeroDeGols2" />
+
+    <Button
+        android:id="@+id/addGols2"
+        android:layout_width="61dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/addFaltas2"
+        app:layout_constraintEnd_toEndOf="@+id/addFaltas2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/addFaltas2"
+        app:layout_constraintTop_toBottomOf="@+id/time2"
+        app:layout_constraintVertical_bias="0.176" />
+
+    <EditText
+        android:id="@+id/numeroDeGols2"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toEndOf="@+id/addGols2"
+        app:layout_constraintTop_toBottomOf="@+id/time2" />
+
+    <TextView
+        android:id="@+id/cartaoVermelho2"
+        android:layout_width="105dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="504dp"
+        android:text="CartaoVermelho"
+        app:layout_constraintBottom_toBottomOf="@+id/addCartaoVermelho2"
+        app:layout_constraintEnd_toEndOf="@+id/cartaoAmarelo2"
+        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/faltasTime2"
+        android:layout_width="105dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="28dp"
+        android:text="Faltas"
+        app:layout_constraintBottom_toTopOf="@+id/cartaoAmarelo2"
+        app:layout_constraintEnd_toEndOf="@+id/qtsDeGols2"
+        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnFinalizarPartida"
+        android:layout_width="171dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="16dp"
+        android:text="Finalizar partida"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnReiniciarPartida"
+        android:layout_width="97dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="4dp"
+        android:text="Reiniciar Partida"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCriarNovaPartida"
+        android:layout_width="84dp"
+        android:layout_height="100dp"
+        android:text="Criar uma nova partida"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/addGols1"
+        android:layout_width="61dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="@+id/addFaltas1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/addFaltas1"
+        app:layout_constraintTop_toBottomOf="@+id/time1" />
+
+    <Button
+        android:id="@+id/addFaltas1"
+        android:layout_width="61dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="@+id/addcartaoAmarelo1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/addcartaoAmarelo1"
+        app:layout_constraintTop_toBottomOf="@+id/addGols1" />
+
+    <Button
+        android:id="@+id/addcartaoAmarelo1"
+        android:layout_width="61dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="24dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="@+id/addCartaoVermelho1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/addCartaoVermelho1"
+        app:layout_constraintTop_toBottomOf="@+id/addFaltas1" />
+
+    <Button
+        android:id="@+id/addCartaoVermelho1"
+        android:layout_width="61dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/time2"
+        app:layout_constraintEnd_toEndOf="@+id/time2"
+        app:layout_constraintStart_toStartOf="@+id/time2"
+        app:layout_constraintTop_toBottomOf="@+id/addcartaoAmarelo1"
+        app:layout_constraintVertical_bias="0.395" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
